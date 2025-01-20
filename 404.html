@@ -74,12 +74,21 @@
             font-weight: bold;
         }
 
-        .breadcrumbs {
+        .breadcrumb {
             font-size: 0.8rem;
             color: #555;
             padding: 10px;
             background-color: #fffacd;
             border-bottom: 1px solid #ddd;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: inherit; /* 元の文字色にする */
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: none; /* ホバー時も下線をつけない */
         }
 
         .content {
@@ -111,22 +120,22 @@
     <div class="container">
         <!-- メニューバー -->
         <div class="menu-bar">
-        <img src="https://hajisize.github.io/logo.png" alt="はじサイズのロゴ" class="logo">
-        <img src="https://hajisize.github.io/favicon.png" alt="メジェドのイラスト" class="mejed">
-        <div class="menu-items">
-            <a href="#">トップ</a>
-            <a href="#">お知らせ</a>
-            <a href="#">ブログ</a>
-            <a href="#">自己紹介</a>
-            <a href="#">お勉強</a>
-            <a href="#">その他</a>
-            <a href="#">お問い合わせ</a>
-    </div>
-</div>
+            <img src="https://hajisize.github.io/logo.png" alt="はじサイズのロゴ" class="logo">
+            <img src="https://hajisize.github.io/favicon.png" alt="メジェドのイラスト" class="mejed">
+            <div class="menu-items">
+                <a href="#">トップ</a>
+                <a href="#">お知らせ</a>
+                <a href="#">ブログ</a>
+                <a href="#">自己紹介</a>
+                <a href="#">お勉強</a>
+                <a href="#">その他</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+        </div>
 
         <!-- パンくずリスト -->
         <div class="breadcrumb">
-        <a href="/">TOP</a> → 404 Not Found
+            <a href="/">TOP</a> → 404 Not Found
         </div>
 
         <!-- コンテンツ部分 -->
