@@ -18,32 +18,66 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
             background-color: #f0e68c;
             background-image: linear-gradient(135deg, #fffacd 25%, transparent 25%, transparent 50%, #fffacd 50%, #fffacd 75%, transparent 75%, transparent);
             background-size: 50px 50px;
-            height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
         }
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
-        p {
-            font-size: 1rem;
+        .menu-bar {
+            background-color: #f0e68c;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            padding: 20px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .footer {
+            border-top: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8rem;
             color: #555;
         }
     </style>
 </head>
 <body>
-    <h1>お探しのページは存在しません｜はじサイズ</h1>
-    <p>このサイトではシンプルなアイコン設定を学べます。</p>
+    <div class="container">
+        <!-- メニューバー -->
+        <div class="menu-bar"></div>
+
+        <!-- コンテンツ部分 -->
+        <div class="content">
+            <h1>お探しのページは存在しません</h1>
+            <p>現在このページにはコンテンツがありません。</p>
+        </div>
+
+        <!-- フッター -->
+        <div class="footer">
+            ©️2025 はじサイズ
+        </div>
+    </div>
 </body>
 </html>
