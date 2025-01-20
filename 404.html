@@ -7,11 +7,7 @@
 
     <!-- ファビコン設定 -->
     <link rel="icon" href="/favicon.png" type="image/png">
-
-    <!-- Safariのお気に入り用アイコン -->
     <link rel="apple-touch-icon" href="/icon.png">
-
-    <!-- AndroidやPWA用の設定 -->
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#f0e68c">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -25,120 +21,98 @@
             margin: 0;
             padding: 0;
             background-color: #f0e68c;
-            background-image: linear-gradient(135deg, #fffacd 25%, transparent 25%, transparent 50%, #fffacd 50%, #fffacd 75%, transparent 75%, transparent);
-            background-size: 50px 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+            background-image: linear-gradient(45deg, #fffacd 25%, transparent 25%, transparent 50%, #fffacd 50%, #fffacd 75%, transparent 75%, transparent);
+            background-size: 40px 40px;
         }
 
         .container {
-            width: 95%;
-            max-width: 1200px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin: 20px 0;
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 40px;
         }
 
         .menu-bar {
             background-color: #f0e68c;
-            padding: 10px 0;
-            text-align: center;
+            padding: 10px 20px;
+            border-radius: 15px 15px 0 0;
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .menu-bar img.logo {
-            width: 195px;
-            margin: 0 auto;
+        .menu-bar img {
+            height: 40px;
+            margin-right: 10px;
         }
 
-        .menu-bar img.mejed {
-            width: 65px;
-            margin: 5px auto;
-        }
-
-        .menu-items {
+        .menu-bar .menu {
             display: flex;
-            justify-content: center;
             gap: 20px;
-            margin-top: 10px;
         }
 
-        .menu-items a {
+        .menu-bar .menu a {
             text-decoration: none;
-            color: black;
+            color: #000;
             font-weight: bold;
         }
 
-        .breadcrumbs {
-            font-size: 0.8rem;
-            color: #555;
-            padding: 10px;
-            background-color: #fffacd;
-            border-bottom: 1px solid #ddd;
+        .menu-bar .menu a:hover {
+            text-decoration: underline;
         }
 
-        .content {
-            padding: 20px;
-            text-align: center;
+        .breadcrumb {
+            font-size: 14px;
+            margin: 10px 0;
+            color: #000;
         }
 
-        .content h1 {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 10px;
+        .breadcrumb a {
+            text-decoration: none;
+            color: inherit;
         }
 
-        .content p {
-            font-size: 1rem;
-            color: #666;
+        .breadcrumb a:hover {
+            text-decoration: none;
         }
 
         footer {
-            border-top: 1px solid #ccc;
-            padding: 10px;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 12px;
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding: 10px 0;
             color: #555;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- メニューバー -->
-        <div class="menu-bar">
-            <img src="https://hajisize.github.io/logo.png" alt="はじサイズのロゴ" class="logo">
-            <img src="https://hajisize.github.io/favicon.png" alt="メジェドのイラスト" class="mejed">
-            <div class="menu-items">
-                <a href="#">トップ</a>
-                <a href="#">お知らせ</a>
-                <a href="#">ブログ</a>
-                <a href="#">自己紹介</a>
-                <a href="#">お勉強</a>
-                <a href="#">その他</a>
-                <a href="#">お問い合わせ</a>
-            </div>
+    <div class="menu-bar">
+        <img src="https://hajisize.github.io/logo.jpg" alt="はじサイズロゴ">
+        <div class="menu">
+            <a href="/">トップ</a>
+            <a href="/news">お知らせ</a>
+            <a href="/blog">ブログ</a>
+            <a href="/about">自己紹介</a>
+            <a href="/study">お勉強</a>
+            <a href="/other">その他</a>
+            <a href="/contact">お問い合わせ</a>
         </div>
-
-        <!-- パンくずリスト -->
-        <div class="breadcrumb">
-            <a href="/" style="text-decoration: none; color: inherit;">TOP</a> → 404 Not Found
-        </div>
-
-        <!-- コンテンツ部分 -->
-        <div class="content">
-            <h1>404 Not Found</h1>
-            <p>お探しのページは存在しません</p>
-        </div>
-
-        <!-- フッター -->
-        <footer>
-            &copy; 2025 はじサイズ. All rights reserved.
-        </footer>
     </div>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">TOP</a> → 404 Not Found
+        </div>
+        <h1>404 Not Found</h1>
+        <p>お探しのページは存在しません</p>
+    </div>
+
+    <footer>
+        © 2025 はじサイズ. All rights reserved.
+    </footer>
 </body>
 </html>
