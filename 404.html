@@ -3,16 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お探しのページは存在しません｜はじサイズ</title>
-
-    <!-- ファビコン設定 -->
-    <link rel="icon" href="/favicon.png" type="image/png">
-
-    <!-- Safariのお気に入り用アイコン -->
-    <link rel="apple-touch-icon" href="/icon.PNG">
-
-    <!-- AndroidやPWA用アイコン -->
-    <link rel="manifest" href="/manifest.json">
+    <title>404 Not Found｜はじサイズ</title>
 
     <!-- スタイル設定 -->
     <style>
@@ -24,37 +15,77 @@
             background-image: linear-gradient(135deg, #fffacd 25%, transparent 25%, transparent 50%, #fffacd 50%, #fffacd 75%, transparent 75%, transparent);
             background-size: 50px 50px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
         }
 
         .container {
-            width: 80%;
+            width: 90%;
             max-width: 800px;
             background-color: white;
-            border-radius: 30px;
+            border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
+            margin: 20px 0;
         }
 
         .menu-bar {
             background-color: #f0e68c;
-            height: 60px;
+            padding: 10px 0;
+            text-align: center;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+        }
+
+        .menu-bar img.logo {
+            width: 150px;
+            margin: 0 auto;
+        }
+
+        .menu-bar img.mejed {
+            width: 50px;
+            margin: 5px auto;
+        }
+
+        .menu-items {
+            display: flex;
             justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .menu-items a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .breadcrumbs {
+            font-size: 0.8rem;
+            color: #555;
+            padding: 10px;
+            background-color: #fffacd;
+            border-bottom: 1px solid #ddd;
         }
 
         .content {
             padding: 20px;
-            flex-grow: 1;
             text-align: center;
         }
 
-        .footer {
+        .content h1 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        footer {
             border-top: 1px solid #ccc;
             padding: 10px;
             text-align: center;
@@ -66,22 +97,32 @@
 <body>
     <div class="container">
         <!-- メニューバー -->
-        <div class="menu-bar"></div>
+        <div class="menu-bar">
+            <img src="https://hajisize.github.io/logo.jpg" alt="はじサイズのロゴ" class="logo">
+            <img src="https://hajisize.github.io/favicon.png" alt="メジェドのイラスト" class="mejed">
+            <div class="menu-items">
+                <a href="#">トップ</a>
+                <a href="#">お知らせ</a>
+                <a href="#">ブログ</a>
+                <a href="#">自己紹介</a>
+                <a href="#">お勉強</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+        </div>
+
+        <!-- パンくずリスト -->
+        <div class="breadcrumbs">
+            TOP → 404 Not Found
+        </div>
 
         <!-- コンテンツ部分 -->
         <div class="content">
-            <h1>お探しのページは存在しません</h1>
-            <p>現在このページにはコンテンツがありません。</p>
+            <h1>404 Not Found</h1>
+            <p>お探しのページは存在しません</p>
         </div>
 
         <!-- フッター -->
-        <footer style="
-            border-top: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #555;
-        ">
+        <footer>
             &copy; 2025 はじサイズ. All rights reserved.
         </footer>
     </div>
