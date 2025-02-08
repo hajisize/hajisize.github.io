@@ -1,1 +1,107 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サイト</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fffacd;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      background: linear-gradient(90deg, #fffacd 10%, #ffffe0 90%);
+      border-bottom: 4px solid #f2cfa1;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin: 0 1.5rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #666;
+    }
+    main {
+      padding: 2rem;
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+      background-color: #fefbd8;
+      border: 2px dashed #ddd;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+    footer {
+      width: 100%;
+      background-color: #fff;
+      padding: 1rem;
+      margin-top: auto;
+      text-align: center;
+    }
+    /* チェック柄風背景 */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(255, 240, 205, 0.5) 20px,
+        rgba(255, 240, 205, 0.5) 40px
+      );
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/about">about</a></li>
+        <li><a href="/news">news</a></li>
+        <li><a href="/blog">blog</a></li>
+        <li><a href="/study">study</a></li>
+        <li><a href="/others">others</a></li>
+        <li><a href="/contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>ようこそ！</h1>
+    <p>メジェドと楽しむエジプト風デザインのサイトへようこそ。</p>
+  </main>
+  <footer>
+    <p>&copy; 2025 Egyptian Site. All rights reserved.</p>
+  </footer>
+</body>
+</html>
