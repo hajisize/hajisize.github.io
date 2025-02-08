@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>サイト</title>
+  <title>はじサイト</title>
   <link rel="icon" href="/favicon.png" type="image/png">
   <style>
     @font-face {
       font-family: 'Zen Kurenaido';
-      src: url('/mnt/data/ZenKurenaido-Regular.ttf') format('truetype');
+      src: url('ZenKurenaido-Regular.ttf') format('truetype');
     }
     * {
       margin: 0;
@@ -25,17 +25,33 @@
     }
     header {
       width: 100%;
-      background-color: #fff;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, #fdf5e6, #fffacd);
       text-align: center;
       padding: 2rem 0;
+      border-bottom: 4px solid #f2cfa1;
+      position: relative;
+    }
+    header img {
+      height: 80px;
+      display: block;
+      margin: 0 auto;
+    }
+    header h1 {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+      color: #444;
+    }
+    header h2 {
+      font-size: 1.5rem;
+      color: #666;
     }
     nav {
+      margin-top: 1rem;
       display: flex;
       justify-content: center;
       padding: 1rem;
-      background: linear-gradient(90deg, #fffacd 10%, #ffffe0 90%);
-      border-bottom: 4px solid #f2cfa1;
+      background: rgba(255, 252, 205, 0.8);
+      border-radius: 12px;
     }
     nav ul {
       display: flex;
@@ -98,7 +114,7 @@
 </head>
 <body>
   <header>
-    <img src="/favicon.png" alt="メジェドアイコン" style="height: 80px;">
+    <img src="/favicon.png" alt="メジェドアイコン">
     <h1>高校生Hajiが一生懸命作ったブログサイト</h1>
     <h2>はじサイト</h2>
     <nav>
