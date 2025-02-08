@@ -6,13 +6,17 @@
   <title>サイト</title>
   <link rel="icon" href="/favicon.png" type="image/png">
   <style>
+    @font-face {
+      font-family: 'Zen Kurenaido';
+      src: url('/mnt/data/ZenKurenaido-Regular.ttf') format('truetype');
+    }
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Zen Kurenaido', Arial, sans-serif;
       background-color: #fffacd;
       color: #333;
       display: flex;
@@ -23,6 +27,8 @@
       width: 100%;
       background-color: #fff;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 2rem 0;
     }
     nav {
       display: flex;
@@ -56,6 +62,7 @@
       border: 2px dashed #ddd;
       border-radius: 8px;
       margin-top: 2rem;
+      margin-bottom: 3rem;
     }
     footer {
       width: 100%;
@@ -81,10 +88,19 @@
         rgba(255, 240, 205, 0.5) 40px
       );
     }
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      margin-bottom: 2rem;
+    }
   </style>
 </head>
 <body>
   <header>
+    <img src="/favicon.png" alt="メジェドアイコン" style="height: 80px;">
+    <h1>高校生Hajiが一生懸命作ったブログサイト</h1>
+    <h2>はじサイト</h2>
     <nav>
       <ul>
         <li><a href="/about">about</a></li>
@@ -101,7 +117,7 @@
     <p>メジェドと楽しむエジプト風デザインのサイトへようこそ。</p>
   </main>
   <footer>
-    <p>&copy; 2025 Egyptian Site. All rights reserved.</p>
+    <p>&copy; 2025 はじサイト. All rights reserved.</p>
   </footer>
 </body>
 </html>
