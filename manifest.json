@@ -1,20 +1,21 @@
 {
-  "name": "はじサイズ",
-  "short_name": "はじサイズ",
+  "name": "はじサイト",
+  "short_name": "はじサイト",
+  "description": "高校生が作ったブログサイト",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f0e68c",
-  "theme_color": "#f0e68c",
+  "background_color": "#fffacd",
+  "theme_color": "#f5deb3",
   "icons": [
     {
-      "src": "/icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
-      "src": "/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
