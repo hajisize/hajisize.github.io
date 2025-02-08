@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>はじサイト</title>
   <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="manifest" href="/manifest.json">
   <style>
     @font-face {
       font-family: 'Zen Kurenaido';
@@ -43,10 +45,6 @@
     }
     header h2 {
       font-size: 1.5rem;
-      background-color: #f5deb3;
-      padding: 0.5rem;
-      display: inline-block;
-      border-radius: 8px;
       color: #333;
     }
     nav {
@@ -141,5 +139,15 @@
   <footer>
     <p>&copy; 2025 はじサイト. All rights reserved.</p>
   </footer>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(function(error) {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+  </script>
 </body>
 </html>
