@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>はじサイト</title>
+  <title>はじサイト - 404 Not Found</title>
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/favicon.png">
   <link rel="manifest" href="/manifest.json">
@@ -31,7 +31,6 @@
       text-align: center;
       padding: 2rem 0;
       border-bottom: 4px solid #f2cfa1;
-      position: relative;
     }
     header img {
       height: 80px;
@@ -40,17 +39,15 @@
     }
     header h1 {
       margin-top: 1rem;
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: #444;
     }
     header h2 {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: #333;
     }
     nav {
       margin-top: 1rem;
-      display: flex;
-      justify-content: center;
       padding: 1rem;
       background: rgba(255, 252, 205, 0.8);
       border-radius: 12px;
@@ -59,10 +56,13 @@
     }
     nav ul {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       list-style: none;
+      padding: 0;
     }
     nav ul li {
-      margin: 0 1.5rem;
+      margin: 0.5rem 1rem;
     }
     nav ul li a {
       text-decoration: none;
@@ -74,55 +74,70 @@
       color: #666;
     }
     main {
-      padding: 2rem;
-      width: 100%;
+      padding: 1.5rem;
+      width: 90%;
       max-width: 900px;
-      text-align: center;
+      text-align: left;
       background-color: #fefbd8;
       border: 2px dashed #ddd;
       border-radius: 8px;
       margin-top: 2rem;
       margin-bottom: 3rem;
     }
+    .breadcrumb {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .breadcrumb a {
+      color: #333;
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
     footer {
       width: 100%;
       background-color: #fff;
       padding: 1rem;
-      margin-top: auto;
       text-align: center;
     }
-    /* チェック柄風背景 */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 20px,
-        rgba(255, 240, 205, 0.5) 20px,
-        rgba(255, 240, 205, 0.5) 40px
-      );
-    }
-    h1 {
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      margin-bottom: 2rem;
+    @media (max-width: 600px) {
+      header {
+        padding: 1.5rem 0;
+      }
+      header img {
+        height: 60px;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+      header h2 {
+        font-size: 1rem;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 0.5rem 0;
+      }
+      main {
+        padding: 1rem;
+        width: 95%;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="/favicon.png" alt="メジェドアイコン">
-    <h1>高校生が一生懸命作ったブログサイト</h1>
-    <h2>はじサイト</h2>
+    <a href="/">
+      <img src="/favicon.png" alt="メジェドアイコン">
+    </a>
+    <h1>ハジメが一生懸命作ったブログサイト</h1>
+    <h2>ハジサイト</h2>
     <nav>
       <ul>
+        <li><a href="/">top</a></li>
         <li><a href="/about">about</a></li>
         <li><a href="/news">news</a></li>
         <li><a href="/blog">blog</a></li>
@@ -133,11 +148,14 @@
     </nav>
   </header>
   <main>
-    <h1>ようこそ！</h1>
-    <p>メジェドと楽しむエジプト風デザインのサイトへようこそ。</p>
+    <div class="breadcrumb">
+      ○ <a href="/">TOP</a> → ○ 404
+    </div>
+    <h1>404 Not Found</h1>
+    <p>お探しのページは見つかりませんでした。</p>
   </main>
   <footer>
-    <p>&copy; 2025 はじサイト. All rights reserved.</p>
+    <p>&copy; はじサイト. All rights reserved.</p>
   </footer>
   <script>
     if ('serviceWorker' in navigator) {
